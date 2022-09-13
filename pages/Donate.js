@@ -103,7 +103,7 @@ export default function Donate() {
                 ) : (
                   <div className="space-y-3 pt-10">
                     <a
-                      href="https://chapa.link/donation/view/DN-n28e7cvBTfp9"
+                      href="https://chapa.link/donation/view/DN-pAzUO0w2ixOM"
                       className="text-xl text-white px-10 py-3 rounded bg-[#42855B]"
                     >
                       Donate With Chapa
