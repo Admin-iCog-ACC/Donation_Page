@@ -253,7 +253,7 @@ const handleData = async ()=>{
           Freqently Asked Questions
         </h1>
         <div className="pt-7">
-          <FAQ />
+//           <FAQ />
         </div>
       </div>
       <Footer />
