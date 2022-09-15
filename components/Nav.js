@@ -296,12 +296,7 @@ function Modal() {
           >
             <span className="mr-1">Career</span>
           </a>
-//           <a
-//             href="https://icogacc.com/register"
-//             className="text-xl text-white px-5 py-3 rounded bg-[#178c9f]"
-//           >
-//             Register
-//           </a>
+
         </div>
       </div>
     </div>
