@@ -18,7 +18,7 @@ const state = {
         '#A5F1E9',
         '#B7C4CF'
       ],
-      data: [50, 25, 25]
+      data: [60, 20, 20]
     }
   ]
 }
