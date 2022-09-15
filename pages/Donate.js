@@ -47,7 +47,10 @@ const handleData = async ()=>{
               <h3 className="lg:text-[18px] pt-8 text-[#333333] leading-tight ">
                 Our New Year’s donation campaign is an opportunity for you to
                 give a gift for a student and make your contribution in building
-                their soft skill and technical knowledge. With your gift, In the
+                their soft skill and technical knowledge.
+               <br/>
+    <br/>
+    With your gift, In the
                 coming Ethiopian New year 2015, we plan to teach 100 students
                 across 4 cities in Ethiopia in giving 100hrs of coding training.
                 Hence, we are launching our first ever donation campaign, in
@@ -206,38 +209,20 @@ const handleData = async ()=>{
               About this Course
             </h2>
             <p className="text-lg text-gray-600">
-              FUN and EASY introduced to the world of programming Applying
-              theoretical knowledge into a problem-solving real-time project{' '}
+              Our Curriculum is structured into 9 levels, beginning from Basic Digital Literacy to AI and Machine Learning. These beginner friendly levels are designed in a fun and easy way to introduce the world of programming. For this donation program, we are only providing  Level 0: Digital Literacy and Level 1: Programming Scratch. {' '}
               <br />
             </p>
 
             {level !== null && level === 0 && (
               <p className="text-lg text-gray-600 pt-10">
-                Level 0: Basic Digital Literacy: The training starts at level 0
-                which entails an introduction to basic digital skills such as;
-                using the internet, social media usage, sending an email and
-                conducting research. Basic digital literacy integrates
-                employability and life skills training. This will help them
-                develop creative thinking, decision making, critical thinking,
-                and effective communication which will in turn insure an
-                equipped individual to combat the 21st century technical
-                competition demand.
+                Level 0:Basic Digital Literacy: An introduction to basic digital skills such as; using the internet, social media usage, sending an email and conducting research including, employability and life skills training. 
               </p>
             )}
 
             {level !== null && level === 1 && (
               <p className="text-lg text-gray-600 pt-10">
                 {' '}
-                Level 1: Programming Scratch: The students will then move to
-                Level 1 Basic Scratch. Scratch is a beginner friendly
-                block-based programming language developed by MIT. Students will
-                utilize Scratch to learn the basics of computer programming by
-                creating educational and interactive animations, games, etc.
-                Scratch provides a space for students to create, explore, and
-                imagine; hence, Students will be more motivated to learn. By the
-                end of the training, the students will be evaluated in a
-                Continuous Assessment Test (CAT) and will be certified for Level
-                1 Basic Scratch.{' '}
+                Level 1: Scratch Programming: Scratch is a beginner friendly block-based programming language developed by MIT. Students will utilize Scratch to learn the basics of computer programming by creating educational and interactive animations, games, etc. .{' '}
               </p>
             )}
           </div>
