@@ -248,14 +248,7 @@ const handleData = async ()=>{
           </div>
         </div>
       </div>
-      <div className="max-w-[1225px]  lg:mx-auto mb-3">
-        <h1 className="lg:text-[35px] pt-5 text-[20px] text-center lg:text-left  font-bold">
-          Freqently Asked Questions
-        </h1>
-        <div className="pt-7">
-//           <FAQ />
-        </div>
-      </div>
+  
       <Footer />
     </>
   );
