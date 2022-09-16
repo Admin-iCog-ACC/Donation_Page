@@ -125,7 +125,7 @@ const handleData = async ()=>{
                 ) : (
                   <div onClick={()=>handleData()} className="md:space-y-3  pt-10">
                     <a
-                      href="https://chapa.link/donation/view/DN-n28e7cvBTfp9"
+                      href="https://chapa.link/donation/view/DN-pAzUO0w2ixOM"
                       className="md:text-xl text-md text-white md:px-10 md:py-3 px-1 py-1 rounded bg-[#42855B]"
                     >
                       Donate With Chapa
