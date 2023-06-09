@@ -41,15 +41,15 @@ export default function Donate() {
   
       if (response.ok) {
         // Handle successful form submission
-        alert('Form submitted successfully!');
+        // alert('Form submitted successfully!');
       } else {
         // Handle error
         const error = await response.json();
-        alert(`An error occurred: ${error.message}`);
+        // alert(`An error occurred: ${error.message}`);
       }
     } catch (error) {
       // Handle network error
-      alert(`An error occurred: ${error.message}`);
+      // alert(`An error occurred: ${error.message}`);
     }
   };
   
