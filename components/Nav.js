@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import Image from "next/legacy/image";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { AiOutlineMenu } from "react-icons/ai";
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 function Nav() {
   const [scrollState, setScrollState] = useState(false);
@@ -12,21 +12,21 @@ function Nav() {
     const changeNavBackground = () => {
       setScrollState(window.scrollY > 65);
     };
-    window.addEventListener("scroll", changeNavBackground);
-    return () => window.removeEventListener("scroll", changeNavBackground);
+    window.addEventListener('scroll', changeNavBackground);
+    return () => window.removeEventListener('scroll', changeNavBackground);
   }, [scrollState]);
 
   return (
     <div
       className={
         scrollState
-          ? "w-full sticky top-0 z-10 h-28  bg-white shadow-lg"
-          : "w-full sticky top-0 z-10 h-28 bg-transparent "
+          ? 'w-full sticky top-0 z-10 h-28  bg-white shadow-lg'
+          : 'w-full sticky top-0 z-10 h-28 bg-transparent'
       }
     >
       <div className="max-w-[1225px] lg:mx-auto mx-5 flex justify-between items-center ">
         <div
-          className={scrollState ? "h-28 w-28 relative" : "h-32 w-32 relative"}
+          className={scrollState ? 'h-28 w-28 relative' : 'h-32 w-32 relative'}
         >
           <Image
             src="/logo-web_sm.png"
@@ -93,14 +93,6 @@ function Nav() {
                   Girls Can Code
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://aysrh.icogacc.com/"
-                  className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                >
-                  AYSRH
-                </a>
-              </li>
               <li className="">
                 <a
                   className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
@@ -115,14 +107,6 @@ function Nav() {
                   href="https://icogacc.com/impact/solve+it"
                 >
                   Solve IT
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="rounded-b bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://seal-app-ud2wj.ondigitalocean.app/"
-                >
-                  Social Impact
                 </a>
               </li>
             </ul>
@@ -143,9 +127,9 @@ function Nav() {
 
           <a
             className="text-black hover:text-[#178c9f] cursor-pointer inline-flex items-center "
-            href="https://digitruckethiopia.icogacc.com/"
+            href="https://aysrh.icogacc.com/"
           >
-            <span className="mr-1">DigiTruck ET</span>
+            <span className="mr-1">AYSRH</span>
           </a>
 
           <a
@@ -155,24 +139,16 @@ function Nav() {
             <span className="mr-1">Career</span>
           </a>
 
-          <a
-            href="https://icogacc.com/register"
-            className="text-xl text-white px-5 py-3 rounded bg-[#178c9f]"
-          >
-            Register
-          </a>
 
           <a
-            href="https://lionfish-app-k67fx.ondigitalocean.app/"
+            onClick={(e) => router.push('/')}
             className="text-xl text-white px-5 py-3 rounded bg-[#178c9f]"
           >
             Donate
           </a>
+          
         </div>
-        <div
-          className="lg:hidden text-4xl text-[#178c9f]"
-          onClick={() => setIsOpen(true)}
-        >
+        <div className="lg:hidden text-4xl text-[#178c9f]" onClick={() => setIsOpen(true)}>
           <AiOutlineMenu />
         </div>
       </div>
@@ -183,16 +159,16 @@ function Nav() {
 
 export default Nav;
 
-import React from "react";
-import { useRecoilState } from "recoil";
-import { navModalState } from "../atoms/navModal";
+import React from 'react';
+import { useRecoilState } from 'recoil';
+import { navModalState } from './atoms/navModal';
 
 function Modal() {
   const [isOpen, setIsOpen] = useRecoilState(navModalState);
   return (
     <div
       className={`${
-        isOpen ? "flex" : "hidden"
+        isOpen ? 'flex' : 'hidden'
       } fixed top-7 w-full h-full  flex items-center justify-center`}
     >
       <div className="modal-overlay absolute w-full h-full bg-[#f7f9ff]"></div>
@@ -231,7 +207,7 @@ function Modal() {
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
               </svg>
             </a>
-            <ul className="absolute  hidden text-gray-700 py-5 group-hover:block w-48 bg-white ">
+            <ul className="absolute z-10  hidden text-gray-700 py-5 group-hover:block w-48 bg-white ">
               <li className="">
                 <a
                   className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
@@ -273,15 +249,6 @@ function Modal() {
               <li className="">
                 <a
                   className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://aysrh.icogacc.com/"
-                >
-                  AYSRH
-                </a>
-              </li>
-
-              <li className="">
-                <a
-                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
                   href="https://icogacc.com/impact/public+workshops"
                 >
                   Public Workshops
@@ -293,14 +260,6 @@ function Modal() {
                   href="https://icogacc.com/impact/solve+it"
                 >
                   Solve IT
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="rounded-b bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://seal-app-ud2wj.ondigitalocean.app/"
-                >
-                  Social Impact
                 </a>
               </li>
             </ul>
@@ -319,6 +278,13 @@ function Modal() {
             <span className="mr-1">Blog</span>
           </a>
 
+          <Link
+            href="/"
+            className="text-black hover:text-[#178c9f] inline-flex items-center "
+          >
+            <span className="mr-1">AYSRH</span>
+          </Link>
+
           <a
             href="https://icogacc.com/career"
             className="text-black hover:text-[#178c9f] inline-flex items-center"
@@ -326,22 +292,10 @@ function Modal() {
             <span className="mr-1">Career</span>
           </a>
           <a
-            className="text-black hover:text-[#178c9f] cursor-pointer inline-flex items-center "
-            onClick={(e) => router.push("/")}
-          >
-            <span className="mr-1">DigiTruck ET</span>
-          </a>
-          <a
             href="https://icogacc.com/register"
             className="text-xl text-white px-5 py-3 rounded bg-[#178c9f]"
           >
             Register
-          </a>
-          <a
-            href="https://lionfish-app-k67fx.ondigitalocean.app/"
-            className="text-xl text-white px-6 py-3 rounded bg-[#178c9f]"
-          >
-            Donate
           </a>
         </div>
       </div>
