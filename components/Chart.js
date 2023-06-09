@@ -1,11 +1,11 @@
-import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import { Chart, ArcElement, Tooltip, Legend, DoughnutController } from "chart.js";
 import { useEffect, useRef } from "react";
 import { FaChild } from "react-icons/fa";
 import { SiTrainerroad } from "react-icons/si";
 import { MdReduceCapacity } from "react-icons/md";
 import Image from "next/image";
 
-Chart.register(ArcElement, Tooltip, Legend);
+Chart.register(ArcElement, Tooltip, Legend, DoughnutController);
 
 const data = {
   labels: ["Sustainability", "Trainer", "Capacity Building"],
