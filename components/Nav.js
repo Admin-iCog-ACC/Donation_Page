@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { AiOutlineMenu } from "react-icons/ai";
 
 function Nav() {
   const [scrollState, setScrollState] = useState(false);
@@ -12,21 +12,21 @@ function Nav() {
     const changeNavBackground = () => {
       setScrollState(window.scrollY > 65);
     };
-    window.addEventListener('scroll', changeNavBackground);
-    return () => window.removeEventListener('scroll', changeNavBackground);
+    window.addEventListener("scroll", changeNavBackground);
+    return () => window.removeEventListener("scroll", changeNavBackground);
   }, [scrollState]);
 
   return (
     <div
       className={
         scrollState
-          ? 'w-full sticky top-0 z-10 h-28  bg-white shadow-lg'
-          : 'w-full sticky top-0 z-10 h-28 bg-transparent'
+          ? "w-full sticky top-0 z-10 h-28  bg-white shadow-lg"
+          : "w-full sticky top-0 z-10 h-28 bg-transparent"
       }
     >
       <div className="max-w-[1225px] lg:mx-auto mx-5 flex justify-between items-center ">
         <div
-          className={scrollState ? 'h-28 w-28 relative' : 'h-32 w-32 relative'}
+          className={scrollState ? "h-28 w-28 relative" : "h-32 w-32 relative"}
         >
           <Image
             src="/logo-web_sm.png"
@@ -87,6 +87,22 @@ function Nav() {
             <ul className="absolute hidden text-gray-700 py-5 bg-white group-hover:block w-48">
               <li className="">
                 <a
+                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
+                  href="https://icogacc.com/impact/public+workshops"
+                >
+                  Public Workshops
+                </a>
+              </li>
+              <li className="">
+                <a
+                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
+                  href="https://aysrh.icogacc.com/"
+                >
+                  AYSRH
+                </a>
+              </li>
+              <li className="">
+                <a
                   className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
                   href="https://icogacc.com/impact/girls+can+code"
                 >
@@ -95,10 +111,10 @@ function Nav() {
               </li>
               <li className="">
                 <a
-                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://icogacc.com/impact/public+workshops"
+                  className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
+                  href="https://seal-app-ud2wj.ondigitalocean.app/"
                 >
-                  Public Workshops
+                  Social Impact
                 </a>
               </li>
               <li className="">
@@ -126,29 +142,30 @@ function Nav() {
           </a>
 
           <a
-            className="text-black hover:text-[#178c9f] cursor-pointer inline-flex items-center "
-            href="https://aysrh.icogacc.com/"
-          >
-            <span className="mr-1">AYSRH</span>
-          </a>
-
-          <a
             href="https://icogacc.com/career"
             className="text-black hover:text-[#178c9f] inline-flex items-center"
           >
             <span className="mr-1">Career</span>
           </a>
 
-
           <a
-            onClick={(e) => router.push('/')}
+            onClick={(e) => router.push("/")}
             className="text-xl text-white px-5 py-3 rounded bg-[#178c9f]"
           >
             Donate
           </a>
-          
+
+          <a
+            href="https://icogacc.com/register"
+            className="text-xl text-white px-5 py-3 rounded bg-[#178c9f]"
+          >
+            Register
+          </a>
         </div>
-        <div className="lg:hidden text-4xl text-[#178c9f]" onClick={() => setIsOpen(true)}>
+        <div
+          className="lg:hidden text-4xl text-[#178c9f]"
+          onClick={() => setIsOpen(true)}
+        >
           <AiOutlineMenu />
         </div>
       </div>
@@ -159,16 +176,16 @@ function Nav() {
 
 export default Nav;
 
-import React from 'react';
-import { useRecoilState } from 'recoil';
-import { navModalState } from './atoms/navModal';
+import React from "react";
+import { useRecoilState } from "recoil";
+import { navModalState } from "./atoms/navModal";
 
 function Modal() {
   const [isOpen, setIsOpen] = useRecoilState(navModalState);
   return (
     <div
       className={`${
-        isOpen ? 'flex' : 'hidden'
+        isOpen ? "flex" : "hidden"
       } fixed top-7 w-full h-full  flex items-center justify-center`}
     >
       <div className="modal-overlay absolute w-full h-full bg-[#f7f9ff]"></div>
@@ -238,6 +255,22 @@ function Modal() {
               </svg>
             </a>
             <ul className="absolute hidden text-gray-700 py-5 bg-white group-hover:block w-48">
+            <li className="">
+                <a
+                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
+                  href="https://icogacc.com/impact/public+workshops"
+                >
+                  Public Workshops
+                </a>
+              </li>
+              <li className="">
+                <a
+                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
+                  href="https://aysrh.icogacc.com/"
+                >
+                  AYSRH
+                </a>
+              </li>
               <li className="">
                 <a
                   className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
@@ -248,10 +281,10 @@ function Modal() {
               </li>
               <li className="">
                 <a
-                  className="bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://icogacc.com/impact/public+workshops"
+                  className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
+                  href="https://seal-app-ud2wj.ondigitalocean.app/"
                 >
-                  Public Workshops
+                  Social Impact
                 </a>
               </li>
               <li className="">
@@ -278,18 +311,17 @@ function Modal() {
             <span className="mr-1">Blog</span>
           </a>
 
-          <Link
-            href="/"
-            className="text-black hover:text-[#178c9f] inline-flex items-center "
-          >
-            <span className="mr-1">AYSRH</span>
-          </Link>
-
           <a
             href="https://icogacc.com/career"
             className="text-black hover:text-[#178c9f] inline-flex items-center"
           >
             <span className="mr-1">Career</span>
+          </a>
+          <a
+            href="#"
+            className="text-xl text-white px-6 py-3 rounded bg-[#178c9f]"
+          >
+            Donate
           </a>
           <a
             href="https://icogacc.com/register"
