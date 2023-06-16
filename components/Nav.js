@@ -112,7 +112,7 @@ function Nav() {
               <li className="">
                 <a
                   className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://seal-app-ud2wj.ondigitalocean.app/"
+                  href="https://impact.icogacc.com/"
                 >
                   Social Impact
                 </a>
@@ -282,7 +282,7 @@ function Modal() {
               <li className="">
                 <a
                   className="rounded-t bg-white hover:text-[#178c9f] py-2 px-4 block whitespace-no-wrap"
-                  href="https://seal-app-ud2wj.ondigitalocean.app/"
+                  href="https://impact.icogacc.com/"
                 >
                   Social Impact
                 </a>
